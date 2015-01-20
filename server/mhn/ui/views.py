@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
-
+from pygal.style import *
+import pygal
 from flask import (
         Blueprint, render_template, request, url_for,
         redirect, g)
@@ -176,3 +177,19 @@ def forgot_passwd(hashstr):
 @ui.route('/reset-password/', methods=['GET'])
 def reset_passwd():
     return render_template('ui/reset-request.html')
+
+
+
+@app.route('/image/top_passwords.svg')
+@login_required
+def graph_passwords():
+    clio=Clio()
+    
+    bar_chart = pygal.Bar(style=LightColorizedStyle,show_x_labels=True)
+    bar_chart.title = "Top 10 Passwords"
+    clio=Clio()
+    top_passwords =clio.hpfeed.count_passwords(clio.hpfeed.get_payloads({'limit':1000},{"channel":"kippo.sessions"})[2])
+    for password in top_passwords.iteritems():
+        bar_chart.add(password[0],[{'label':str(password[0]),'xlink':'','value':password[1]}])
+
+    return bar_chart.render_response()
