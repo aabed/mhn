@@ -367,6 +367,15 @@ class HpFeed(ResourceMixin):
                 for cred in (creds['credentials']):
                     users.append(cred[0])                
         return Counter(users)
+
+
+    def count_combos(self,payloads):
+        combos_count=[]
+        for combos in payloads:
+            if combos['credentials']!= None:
+                for combo in combos['credentials']:
+                    combos_count.append(combo[0]+": "+combo[1])
+        return Counter(combos_count)
         
     def _tops(self, field, chan, top=5, hours_ago=None):
         query = {'channel': chan}
