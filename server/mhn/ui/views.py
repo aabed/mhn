@@ -201,10 +201,24 @@ def graph_users():
     
     bar_chart = pygal.Bar(style=LightColorizedStyle,show_x_labels=True)
     bar_chart.title = "Top 10 Users"
-    #bar_chart.x_labels = map(str, range(1))
     clio=Clio()
     top_passwords =clio.hpfeed.count_users(clio.hpfeed.get_payloads({'limit':10000},{"channel":"kippo.sessions"})[2])
     for password in top_passwords.iteritems():
         bar_chart.add(password[0],[{'label':str(password[0]),'xlink':'','value':password[1]}])
+
+    return bar_chart.render_response()
+
+
+@app.route('/image/top_combos.svg')
+@login_required
+def graph_combos():
+    clio=Clio()
+    
+    bar_chart = pygal.Bar(style=LightColorizedStyle,show_x_labels=True)
+    bar_chart.title = "Top 10 Combos"
+    clio=Clio()
+    top_combos =clio.hpfeed.count_combos(clio.hpfeed.get_payloads({'limit':10000},{"channel":"kippo.sessions"})[2])
+    for combo in top_combos.iteritems():
+        bar_chart.add(combo[0],[{'label':str(combo[0]),'xlink':'','value':combo[1]}])
 
     return bar_chart.render_response()
