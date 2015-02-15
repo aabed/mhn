@@ -10,7 +10,7 @@ from collections import Counter
 from bson import ObjectId, son
 import json
 import datetime
-
+import dateutil.parser
 
 class Clio():
     """
@@ -258,12 +258,15 @@ class Session(ResourceMixin):
         return clean
 
     def _tops(self, fields, top=5, hours_ago=None, **kwargs):
+
         if isinstance(fields, basestring):
             fields = [fields,]
 
         match_query = dict([ (field, {'$ne': None}) for field in fields ])
 
         for name, value in kwargs.items():
+            print name, value
+
             if name.startswith('ne__'):
                 match_query[name[4:]] = {'$ne': value}
             elif name.startswith('gt__'):
@@ -296,6 +299,7 @@ class Session(ResourceMixin):
                 '$sort': son.SON([('count', -1)])
             }
         ]
+        print query
 
         res = self.collection.aggregate(query)
         def format_result(r):
@@ -376,14 +380,35 @@ class HpFeed(ResourceMixin):
                 for combo in combos['credentials']:
                     combos_count.append(combo[0]+": "+combo[1])
         return Counter(combos_count)
-        
+
+    def diff_time(self,endTime,startTime):
+        d1 = dateutil.parser.parse(endTime)
+        d2 = dateutil.parser.parse(startTime)
+        res = res = d1 - d2
+        return res.total_seconds()  
+
+    def session_times(self,payloads):
+        times=dict()
+        for time in payloads:
+            if time['startTime'] !=None:
+                delta=self.diff_time(time['endTime'],time['startTime'])
+                if str(time['peerIP']) in times:
+                    times[str(time['peerIP'])].append(delta)
+                else:
+                    times[str(time['peerIP'])]=[delta]
+        return times
+
+
+  
     def _tops(self, field, chan, top=5, hours_ago=None):
         query = {'channel': chan}
-
+        print "$$$$$$$$$$$"
+        print chan
         if hours_ago:
             query['hours_ago'] = hours_ago
 
         res = self.get(options={}, **query)
+        import ipdb;ipdb.set_trace()
         val_list = [rec.get(field) for rec in [json.loads(r.payload) for r in res] if field in rec]
         cnt = Counter()
         for val in val_list:

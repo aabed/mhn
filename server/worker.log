@@ -1,0 +1,37 @@
+celery beat v3.1.17 (Cipater) is starting.
+__    -    ... __   -        _
+Configuration ->
+    . broker -> redis://localhost:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> now (0s)
+ 
+ -------------- celery@ubuntu v3.1.17 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-43-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         __main__:0x7fcb207f1c90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . mhn.tasks.rules.fetch_sources
+  . mhn.tasks.rules.render_rules
+
+celery beat v3.1.17 (Cipater) is starting.
+__    -    ... __   -        _
+Configuration ->
+    . broker -> redis://localhost:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> now (0s)

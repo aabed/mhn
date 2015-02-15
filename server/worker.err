@@ -1,0 +1,1811 @@
+[2015-01-20 03:31:33,582: INFO/MainProcess] beat: Starting...
+[2015-01-20 03:31:34,020: WARNING/MainProcess] /home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2015-01-20 03:31:34,759: INFO/MainProcess] Connected to redis://localhost:6379//
+[2015-01-20 03:31:34,782: INFO/MainProcess] mingle: searching for neighbors
+[2015-01-20 03:31:35,794: INFO/MainProcess] mingle: all alone
+[2015-01-20 03:31:35,814: WARNING/MainProcess] celery@ubuntu ready.
+[2015-01-20 03:31:36,075: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[ae242249-ecd6-43f5-b469-566159650c45]
+[2015-01-20 03:31:36,085: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[15d3a80a-373c-41a4-8bfb-bb38bb748e3a]
+[2015-01-20 03:31:36,106: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[1d0c81d8-2262-4fd1-a300-c458f7abe845]
+[2015-01-20 03:31:36,120: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[55f197c3-1791-431c-838e-fe3839f13a43]
+[2015-01-20 03:31:36,127: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[fc87f0c6-df0b-4653-a788-9de4beab0743]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-20 03:31:36,367 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-20 03:31:36,367: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-20 03:31:36,373 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:31:36,373: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:31:36,409: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:32:48,634 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-20 03:32:48,634: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-20 03:32:53,533: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-20 03:32:57,754: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-20 03:33:02,682: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-20 03:33:07,984: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-20 03:33:12,734: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-20 03:33:17,560: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-20 03:33:22,397: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-20 03:33:27,253: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-20 03:33:32,110: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-20 03:33:37,024: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-20 03:33:41,654: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-20 03:33:46,352: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-20 03:33:50,836: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-20 03:33:55,798: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-20 03:34:00,533: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-20 03:34:05,197: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-20 03:34:10,281: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-20 03:34:15,507: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-20 03:34:20,882: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-20 03:34:25,681: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-20 03:34:30,526: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-20 03:34:35,423: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-20 03:34:39,909: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-20 03:34:44,206: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-20 03:34:48,405: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-20 03:34:52,569: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-20 03:34:56,760: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-20 03:35:00,912: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-20 03:35:05,265: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-20 03:35:10,088: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-20 03:35:15,023: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-20 03:35:19,958: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-20 03:35:24,866: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-20 03:35:29,819: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-20 03:35:31,246: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:35:31,249 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-20 03:35:31,249: INFO/Worker-1] Rendering rules.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:25]:
+Finished rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:39:08,262 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Finished rendering rules.
+[2015-01-20 03:39:08,262: INFO/Worker-1] Finished rendering rules.
+[2015-01-20 03:39:08,386: INFO/MainProcess] Task mhn.tasks.rules.fetch_sources[ae242249-ecd6-43f5-b469-566159650c45] succeeded in 452.299399246s: None
+[2015-01-20 03:39:08,392: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[bb68590a-32a2-4854-8e3f-06545a78886a]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-20 03:39:08,401 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-20 03:39:08,401: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-20 03:39:08,404 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:39:08,404: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:39:08,409: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:40:18,691 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-20 03:40:18,691: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-20 03:40:23,588: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-20 03:40:28,335: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-20 03:40:33,083: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-20 03:40:37,815: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-20 03:40:42,770: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-20 03:40:48,029: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-20 03:40:52,921: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-20 03:40:58,031: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-20 03:41:04,317: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-20 03:41:09,141: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-20 03:41:13,833: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-20 03:41:18,212: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-20 03:41:22,961: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-20 03:41:27,925: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-20 03:41:32,603: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-20 03:41:37,471: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-20 03:41:42,453: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-20 03:41:47,205: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-20 03:41:52,229: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-20 03:41:56,845: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-20 03:42:01,859: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-20 03:42:06,767: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-20 03:42:11,751: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-20 03:42:16,294: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-20 03:42:20,839: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-20 03:42:25,493: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-20 03:42:30,543: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-20 03:42:35,559: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-20 03:42:41,537: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-20 03:42:48,680: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-20 03:42:59,424: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-20 03:43:05,864: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-20 03:43:10,842: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-20 03:43:15,805: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-20 03:43:17,211: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:43:17,213 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-20 03:43:17,213: INFO/Worker-1] Rendering rules.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:25]:
+Finished rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:48:41,109 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Finished rendering rules.
+[2015-01-20 03:48:41,109: INFO/Worker-1] Finished rendering rules.
+[2015-01-20 03:48:41,394: INFO/MainProcess] Task mhn.tasks.rules.fetch_sources[15d3a80a-373c-41a4-8bfb-bb38bb748e3a] succeeded in 573.00613671s: None
+[2015-01-20 03:48:41,417: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[c68c2a0d-15ce-491d-992f-9066b19ef0a9]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-20 03:48:41,440 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-20 03:48:41,440: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-20 03:48:41,460 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:48:41,460: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 03:48:41,475: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-20 03:51:00,267 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-20 03:51:00,267: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-20 03:51:10,086: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-20 03:51:19,987: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-20 03:51:29,476: WARNING/Worker-1] Imported 1500 rules so far...
+
+worker: Warm shutdown (MainProcess)
+[2015-01-20 03:51:38,384: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-19 17:54:31,955: INFO/MainProcess] beat: Starting...
+[2015-01-19 17:54:32,759: WARNING/MainProcess] /home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2015-01-19 17:54:32,958: INFO/MainProcess] Connected to redis://localhost:6379//
+[2015-01-19 17:54:32,977: INFO/MainProcess] mingle: searching for neighbors
+[2015-01-19 17:54:33,992: INFO/MainProcess] mingle: all alone
+[2015-01-19 17:54:34,029: WARNING/MainProcess] celery@ubuntu ready.
+[2015-01-19 17:54:34,085: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[17855f83-45d8-40ef-889a-3bc807112920]
+[2015-01-19 17:54:34,089: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[f5d536ef-c7f5-4f15-84c5-9ee7464111d2]
+[2015-01-19 17:54:34,098: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[559ff15c-6a0b-42a6-bcff-8880fc4b9104]
+[2015-01-19 17:54:34,102: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[409baa1c-c38d-40cd-9148-2f07c429dd7f]
+[2015-01-19 17:54:34,112: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[d5fa02bf-538f-4881-9227-bc7e7518d073]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-19 17:54:34,283 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-19 17:54:34,283: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-19 17:54:34,290 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 17:54:34,290: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 17:54:34,353: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-19 17:56:13,193 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-19 17:56:13,193: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-19 17:56:18,694: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-19 17:56:23,944: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-19 17:56:29,548: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-19 17:56:34,584: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-19 17:56:39,964: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-19 17:56:45,172: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-19 17:56:50,443: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-19 17:56:55,194: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-19 17:57:00,169: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-19 17:57:05,905: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-19 17:57:13,105: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-19 17:57:19,345: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-19 17:57:26,471: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-19 17:57:32,443: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-19 17:57:38,309: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-19 17:57:44,141: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-19 17:57:49,646: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-19 17:57:54,769: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-19 17:58:00,244: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-19 17:58:04,982: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-19 17:58:10,020: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-19 17:58:14,903: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-19 17:58:19,695: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-19 17:58:24,691: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-19 17:58:29,569: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-19 17:58:34,565: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-19 17:58:39,480: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-19 17:58:44,348: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-19 17:58:49,459: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-19 17:58:54,520: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-19 17:58:59,550: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-19 17:59:04,854: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-19 17:59:10,556: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-19 17:59:15,449: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-19 17:59:16,757: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-19 17:59:16,759 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-19 17:59:16,759: INFO/Worker-1] Rendering rules.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:25]:
+Finished rendering rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:03:46,449 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Finished rendering rules.
+[2015-01-19 18:03:46,449: INFO/Worker-1] Finished rendering rules.
+[2015-01-19 18:03:47,653: INFO/MainProcess] Task mhn.tasks.rules.fetch_sources[17855f83-45d8-40ef-889a-3bc807112920] succeeded in 553.55014532s: None
+[2015-01-19 18:03:47,681: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[03cb5f72-5b90-46a8-b264-7475df734fe8]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-19 18:03:47,730 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-19 18:03:47,730: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-19 18:03:47,734 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 18:03:47,734: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 18:03:47,761: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:05:12,296 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-19 18:05:12,296: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-19 18:05:17,645: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-19 18:05:22,291: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-19 18:05:26,970: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-19 18:05:31,870: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-19 18:05:37,084: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-19 18:05:42,090: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-19 18:05:47,470: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-19 18:05:54,430: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-19 18:06:00,382: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-19 18:06:07,414: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-19 18:06:14,743: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-19 18:06:20,258: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-19 18:06:25,217: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-19 18:06:30,394: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-19 18:06:36,375: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-19 18:06:41,229: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-19 18:06:47,610: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-19 18:06:52,866: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-19 18:06:59,294: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-19 18:07:04,806: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-19 18:07:10,315: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-19 18:07:15,849: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-19 18:07:20,622: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-19 18:07:25,202: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-19 18:07:30,091: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-19 18:07:35,745: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-19 18:07:41,982: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-19 18:07:48,099: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-19 18:07:53,769: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-19 18:07:59,204: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-19 18:08:04,755: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-19 18:08:10,051: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-19 18:08:16,055: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-19 18:08:23,647: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-19 18:08:25,780: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:08:25,784 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-19 18:08:25,784: INFO/Worker-1] Rendering rules.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:25]:
+Finished rendering rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:14:57,914 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Finished rendering rules.
+[2015-01-19 18:14:57,914: INFO/Worker-1] Finished rendering rules.
+[2015-01-19 18:14:58,468: INFO/MainProcess] Task mhn.tasks.rules.fetch_sources[f5d536ef-c7f5-4f15-84c5-9ee7464111d2] succeeded in 670.812269329s: None
+[2015-01-19 18:14:58,528: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[85262074-0dde-4cd6-85cc-f5eb7f703528]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-19 18:14:58,547 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-19 18:14:58,547: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-19 18:14:58,552 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 18:14:58,552: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-19 18:14:58,568: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:16:07,811 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-19 18:16:07,811: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-19 18:16:12,945: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-19 18:16:17,920: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-19 18:16:24,129: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-19 18:16:29,831: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-19 18:16:34,591: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-19 18:16:39,267: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-19 18:16:43,689: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-19 18:16:48,354: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-19 18:16:54,209: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-19 18:17:00,832: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-19 18:17:12,092: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-19 18:17:18,871: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-19 18:17:29,114: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-19 18:17:33,943: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-19 18:17:38,808: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-19 18:17:43,422: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-19 18:17:47,720: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-19 18:17:51,929: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-19 18:17:56,270: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-19 18:18:00,915: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-19 18:18:05,892: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-19 18:18:10,772: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-19 18:18:15,524: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-19 18:18:20,342: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-19 18:18:25,073: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-19 18:18:29,230: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-19 18:18:33,933: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-19 18:18:38,717: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-19 18:18:48,231: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-19 18:18:57,539: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-19 18:19:02,230: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-19 18:19:06,972: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-19 18:19:11,797: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-19 18:19:16,718: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-19 18:19:18,091: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-19 18:19:18,093 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-19 18:19:18,093: INFO/Worker-1] Rendering rules.
+
+worker: Warm shutdown (MainProcess)
+
+worker: Warm shutdown (MainProcess)
+[2015-01-19 18:19:56,236: WARNING/MainProcess] Restoring 4 unacknowledged message(s).
+[2015-01-19 18:19:56,924: WARNING/MainProcess] Traceback (most recent call last):
+[2015-01-19 18:19:56,925: WARNING/MainProcess] File "/usr/lib/python2.7/multiprocessing/util.py", line 274, in _run_finalizers
+[2015-01-19 18:19:57,056: WARNING/MainProcess] finalizer()
+[2015-01-19 18:19:57,058: WARNING/MainProcess] File "/usr/lib/python2.7/multiprocessing/util.py", line 207, in __call__
+[2015-01-19 18:19:57,059: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2015-01-19 18:19:57,076: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/transport/virtual/__init__.py", line 218, in restore_unacked_once
+[2015-01-19 18:19:57,184: WARNING/MainProcess] unrestored = self.restore_unacked()
+[2015-01-19 18:19:57,185: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/transport/redis.py", line 149, in restore_unacked
+[2015-01-19 18:19:57,186: WARNING/MainProcess] self.restore_by_tag(tag, client=client)
+[2015-01-19 18:19:57,187: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/transport/redis.py", line 194, in restore_by_tag
+[2015-01-19 18:19:57,187: WARNING/MainProcess] tag, client.pipeline().hget(self.unacked_key, tag)).execute()
+[2015-01-19 18:19:57,188: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/redis/client.py", line 2593, in execute
+[2015-01-19 18:19:57,258: WARNING/MainProcess] return execute(conn, stack, raise_on_error)
+[2015-01-19 18:19:57,260: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/redis/client.py", line 2447, in _execute_transaction
+[2015-01-19 18:19:57,262: WARNING/MainProcess] connection.send_packed_command(all_cmds)
+[2015-01-19 18:19:57,264: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/redis/connection.py", line 532, in send_packed_command
+[2015-01-19 18:19:57,265: WARNING/MainProcess] self.connect()
+[2015-01-19 18:19:57,266: WARNING/MainProcess] File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/redis/connection.py", line 436, in connect
+[2015-01-19 18:19:57,267: WARNING/MainProcess] raise ConnectionError(self._error_message(e))
+[2015-01-19 18:19:57,269: WARNING/MainProcess] ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-01-20 04:21:40,522: INFO/MainProcess] beat: Starting...
+[2015-01-20 04:21:40,919: WARNING/MainProcess] /home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2015-01-20 04:21:41,100: INFO/MainProcess] Connected to redis://localhost:6379//
+[2015-01-20 04:21:41,121: INFO/MainProcess] mingle: searching for neighbors
+[2015-01-20 04:21:42,134: INFO/MainProcess] mingle: all alone
+[2015-01-20 04:21:42,158: WARNING/MainProcess] celery@ubuntu ready.
+[2015-01-20 04:21:43,097: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[409baa1c-c38d-40cd-9148-2f07c429dd7f]
+[2015-01-20 04:21:43,100: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[d5fa02bf-538f-4881-9227-bc7e7518d073]
+[2015-01-20 04:21:43,112: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[03cb5f72-5b90-46a8-b264-7475df734fe8]
+[2015-01-20 04:21:43,122: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[85262074-0dde-4cd6-85cc-f5eb7f703528]
+[2015-01-20 04:21:43,128: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[87a07362-67dc-4138-b883-6feac81d46a0]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-20 04:21:43,377 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-20 04:21:43,377: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-20 04:21:43,384 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 04:21:43,384: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 04:21:43,450: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-20 04:22:57,954 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-20 04:22:57,954: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-20 04:23:03,608: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-20 04:23:08,643: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-20 04:23:13,213: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-20 04:23:18,487: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-20 04:23:23,908: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-20 04:23:29,272: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-20 04:23:36,606: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-20 04:23:44,250: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-20 04:23:49,953: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-20 04:23:57,235: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-20 04:24:04,571: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-20 04:24:10,072: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-20 04:24:14,533: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-20 04:24:19,290: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-20 04:24:24,690: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-20 04:24:31,108: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-20 04:24:41,109: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-20 04:24:50,366: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-20 04:24:58,753: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-20 04:25:10,877: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-20 04:25:22,669: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-20 04:25:34,892: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-20 04:25:44,553: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-20 04:25:53,585: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-20 04:25:59,626: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-20 04:26:08,312: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-20 04:26:14,685: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-20 04:26:21,409: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-20 04:26:30,779: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-20 04:26:43,318: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-20 04:26:52,883: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-20 04:27:03,195: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-20 04:27:09,773: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-20 04:27:15,229: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-20 04:27:16,804: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 04:27:16,842 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-20 04:27:16,842: INFO/Worker-1] Rendering rules.
+[2015-01-20 04:31:38,492: ERROR/MainProcess] Task mhn.tasks.rules.fetch_sources[409baa1c-c38d-40cd-9148-2f07c429dd7f] raised unexpected: IOError(13, 'Permission denied')
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/aabed/mhn/server/mhn/tasks/__init__.py", line 13, in __call__
+    return TaskBase.__call__(self, *args, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/aabed/mhn/server/mhn/tasks/rules.py", line 78, in fetch_sources
+    render_rules()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/local.py", line 167, in <lambda>
+    __call__ = lambda x, *a, **kw: x._get_current_object()(*a, **kw)
+  File "/home/aabed/mhn/server/mhn/tasks/__init__.py", line 13, in __call__
+    return TaskBase.__call__(self, *args, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/trace.py", line 439, in __protected_call__
+    return orig(self, *args, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/task.py", line 420, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/aabed/mhn/server/mhn/tasks/rules.py", line 23, in render_rules
+    with open(fpath, 'w') as rfile:
+IOError: [Errno 13] Permission denied: '/home/aabed/mhn/server/mhn/static/mhn.rules'
+[2015-01-20 04:31:39,200: INFO/MainProcess] Received task: mhn.tasks.rules.fetch_sources[c06cece4-7766-4aaf-ad6d-4f72a589376f]
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:31]:
+Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+2015-01-20 04:31:39,257 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Fetching sources from 1 sources.
+[2015-01-20 04:31:39,257: INFO/Worker-1] Fetching sources from 1 sources.
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:35]:
+Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+--------------------------------------------------------------------------------
+2015-01-20 04:31:39,312 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 04:31:39,312: INFO/Worker-1] Downloading from "http://rules.emergingthreats.net/open/snort-2.9.0/emerging.rules.tar.gz".
+[2015-01-20 04:31:39,432: INFO/Worker-1] Starting new HTTP connection (1): rules.emergingthreats.net
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:76]:
+Bulk importing 17144 rules.
+--------------------------------------------------------------------------------
+2015-01-20 04:33:03,469 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Bulk importing 17144 rules.
+[2015-01-20 04:33:03,469: INFO/Worker-1] Bulk importing 17144 rules.
+[2015-01-20 04:33:10,262: WARNING/Worker-1] Imported 500 rules so far...
+[2015-01-20 04:33:19,011: WARNING/Worker-1] Imported 1000 rules so far...
+[2015-01-20 04:33:25,901: WARNING/Worker-1] Imported 1500 rules so far...
+[2015-01-20 04:33:31,434: WARNING/Worker-1] Imported 2000 rules so far...
+[2015-01-20 04:33:38,349: WARNING/Worker-1] Imported 2500 rules so far...
+[2015-01-20 04:33:46,733: WARNING/Worker-1] Imported 3000 rules so far...
+[2015-01-20 04:33:52,270: WARNING/Worker-1] Imported 3500 rules so far...
+[2015-01-20 04:33:59,350: WARNING/Worker-1] Imported 4000 rules so far...
+[2015-01-20 04:34:07,042: WARNING/Worker-1] Imported 4500 rules so far...
+[2015-01-20 04:34:13,886: WARNING/Worker-1] Imported 5000 rules so far...
+[2015-01-20 04:34:20,049: WARNING/Worker-1] Imported 5500 rules so far...
+[2015-01-20 04:34:27,749: WARNING/Worker-1] Imported 6000 rules so far...
+[2015-01-20 04:34:36,231: WARNING/Worker-1] Imported 6500 rules so far...
+[2015-01-20 04:34:43,115: WARNING/Worker-1] Imported 7000 rules so far...
+[2015-01-20 04:34:51,809: WARNING/Worker-1] Imported 7500 rules so far...
+[2015-01-20 04:34:57,503: WARNING/Worker-1] Imported 8000 rules so far...
+[2015-01-20 04:35:03,435: WARNING/Worker-1] Imported 8500 rules so far...
+[2015-01-20 04:35:08,586: WARNING/Worker-1] Imported 9000 rules so far...
+[2015-01-20 04:35:14,084: WARNING/Worker-1] Imported 9500 rules so far...
+[2015-01-20 04:35:19,662: WARNING/Worker-1] Imported 10000 rules so far...
+[2015-01-20 04:35:26,129: WARNING/Worker-1] Imported 10500 rules so far...
+[2015-01-20 04:35:31,615: WARNING/Worker-1] Imported 11000 rules so far...
+[2015-01-20 04:35:37,968: WARNING/Worker-1] Imported 11500 rules so far...
+[2015-01-20 04:35:45,920: WARNING/Worker-1] Imported 12000 rules so far...
+[2015-01-20 04:35:53,937: WARNING/Worker-1] Imported 12500 rules so far...
+[2015-01-20 04:35:59,861: WARNING/Worker-1] Imported 13000 rules so far...
+[2015-01-20 04:36:06,438: WARNING/Worker-1] Imported 13500 rules so far...
+[2015-01-20 04:36:12,383: WARNING/Worker-1] Imported 14000 rules so far...
+[2015-01-20 04:36:18,186: WARNING/Worker-1] Imported 14500 rules so far...
+[2015-01-20 04:36:23,014: WARNING/Worker-1] Imported 15000 rules so far...
+[2015-01-20 04:36:28,585: WARNING/Worker-1] Imported 15500 rules so far...
+[2015-01-20 04:36:35,113: WARNING/Worker-1] Imported 16000 rules so far...
+[2015-01-20 04:36:40,576: WARNING/Worker-1] Imported 16500 rules so far...
+[2015-01-20 04:36:45,835: WARNING/Worker-1] Imported 17000 rules so far...
+[2015-01-20 04:36:47,552: WARNING/Worker-1] Finished Importing 17144 rules.  Committing data
+--------------------------------------------------------------------------------
+INFO in rules [/home/aabed/mhn/server/mhn/tasks/rules.py:19]:
+Rendering rules.
+--------------------------------------------------------------------------------
+2015-01-20 04:36:47,595 -  /home/aabed/mhn/server/mhn/tasks/rules.py - Rendering rules.
+[2015-01-20 04:36:47,595: INFO/Worker-1] Rendering rules.
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+Traceback (most recent call last):
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
+Traceback (most recent call last):
+  File "/home/aabed/mhn/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/celery.py", line 769, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 465, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 485, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/bin/base.py", line 488, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 92, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/aabed/mhn/env/local/lib/python2.7/site-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/aabed/mhn/server/mhn/__init__.py", line 41, in <module>
+    from mhn.ui.views import ui
+  File "/home/aabed/mhn/server/mhn/ui/views.py", line 2, in <module>
+    from pygal.style import *
+ImportError: No module named pygal.style
