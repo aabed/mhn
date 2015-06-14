@@ -88,6 +88,32 @@ def get_attacks():
                            get_flag_ip=get_flag_ip, get_sensor_name=get_sensor_name,
                            **request.args.to_dict())
 
+
+@ui.route('/reports/', methods=['GET'])
+@login_required
+def get_reports():
+
+    request.args = dict((k,v) for k,v in request.args.iteritems() if v or  k =='end_date' )
+    print request.args
+
+    clio = Clio()
+    options = paginate_options(limit=10)
+    options['order_by'] = '-timestamp'
+    print request.args
+    total = clio.session.count(**request.args)
+    if "destination_port" in request.args:
+        request.args.pop('destination_port',0)
+        sessions= clio.session._tops('destination_port',10,**request.args)
+    else:
+
+        sessions= clio.session._tops('source_ip',10,**request.args)
+    sessions = mongo_pages(sessions, total, limit=10)
+    return render_template('ui/reports.html', reports=sessions,
+                           sensors=Sensor.query, view='ui.get_reports',
+                           get_flag_ip=get_flag_ip, get_sensor_name=get_sensor_name,
+                           **request.args)
+
+
 @ui.route('/feeds/', methods=['GET'])
 @login_required
 def get_feeds():
