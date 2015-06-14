@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<div class="row">
+    <div class="small-4 large-centered columns">
+        <h2>Attacks Report</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 large-centered columns">
+        <div class="row">
+            <div class="small-4 columns">
+                <h4>Search Filters</h4>
+            </div>
+        </div>
+        <form id="attack-filter" action="" method="get">
+            <div class="row">
+                <div class="small-3 columns">
+                    <label>Sensor</label>
+                </div>
+                <div class="small-2 columns">
+                    <label>Honeypot</label>
+                </div>
+                <div class="small-2 columns">
+                    <label>Start Date</label>
+                </div>
+                <div class="small-2 columns">
+                    <label>End Date</label>
+                </div>
+                
+
+                <div class="small-2  columns">
+                    <label>Report Type</label>
+                </div>
+                <div class="small-1  columns">
+                    <label></label>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <select name="identifier">
+                        <option value="">All</option>
+                        {% for s in sensors %}
+                        <option {% if s.uuid == identifier %}selected{% endif %} value="{{ s.uuid }}">{{ s.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="small-2 columns">
+                    <select name="honeypot">
+                        <option value="">All</option>
+                        {% for pot in settings.supported_honeypots %}
+                        <option {% if pot == honeypot %}selected{% endif %} value="{{ pot }}">{{ pot }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="small-2 columns">
+                    <input type="text" name="start_date" value="{{ start_date }}" placeholder="YYYY-MM-DD" />
+                </div>
+                <div class="small-2 columns">
+                    <input type="text" name="end_date" value="{{ end_date }}" placeholder="YYYY-MM-DD" />
+                </div> 
+
+                <div class="small-2 columns">
+                    <select name="destination_port">
+                      <option  value="">IPs</option>
+                      <option value="True">Ports</option>
+
+                  </select>
+
+              </div>
+
+              <div class="small-1 columns">
+                <input class="tiny button" type="submit" value="GO" />
+            </div> 
+        </div>
+    </form>
+</div>
+</div>
+<div style="max-width: 90.5rem;" class="row" align="center">
+   <div class="large-8 large-centered columns">
+    <div class="large-4  columns">
+        <table style="width:100%;">
+
+
+            {% if 'source_ip' in reports.items[0] %}
+            <thead>
+                <tr>
+
+                    <th></th>
+                    <th>Country</th>
+                    <th>Src IP</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for at in reports.items %}
+                <tr>
+                   <td>{{ loop.index }}</td>
+                   <td><img src="{{ get_flag_ip(at.source_ip) }}" width=25 height=50 /></td>
+                   <td> <a href="{{ url_for('ui.get_attacks', source_ip=at.source_ip) }}" style="color: #000000">{{ at.source_ip }} </a></td>
+
+                   <td>{{ at.count }}</td>
+               </tr>
+               {% endfor %}
+               {% else %}
+               <thead>
+                <tr>
+
+
+                    <th>Rate</th>
+                    <th>Port</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            {% for at in reports.items %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ at.destination_port }}</td>
+                <td>{{ at.count  }}</td>
+
+
+            </tr>
+            {% endfor %}
+            {% endif %}
+
+        </tbody>
+
+
+
+
+    </table>
+</div>
+<div class="large-8  columns">
+ <div id="container" style="width:90%; height:500px;"></div></div></div>
+ <script>$(function () {
+
+    // Radialize the colors
+//    Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+//        return {
+  //          radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+    //        stops: [
+      //         [0, color],
+        //        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+ //           ]
+   //     };
+  // });
+
+    // Build the chart
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 60,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Chart'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'percentage',
+
+
+
+
+            data: [
+            {% if 'source_ip' in reports.items[0] %}
+            {% for at in reports.items %}
+            ['{{ at.source_ip }}',   {{ at.count  }}],
+            {% endfor %}
+            {% else %}
+            {% for at in reports.items %}
+            ['{{ at.destination_port }}',   {{ at.count  }}],
+            {% endfor %}
+            {% endif %}
+            ]
+
+
+        }]
+    });
+});
+</script>
+
+</div>
+{% endblock %}
